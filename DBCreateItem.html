@@ -1,18 +1,27 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/default.css">
+        <link rel="stylesheet" href="./css/itemCreation.css">
     </head>
     <body>
-        <ul>
-            <li><a href="Inventory.html">Home</a></li>
-            <li><a href="DBCreateItem.html">Add Items</a></li>
-        </ul>
-        <form action = "./scripts/DBCreateItem.php" method = "GET">
-            Product Name: <input type = "text" name = "pname" />
-            Unit Price: <input type = "text" name = "uprice" />
-            Current Amount: <input type = "text" name = "camount" />
-            Reorder Amount: <input type = "text" name = "ramount" />
-            <input type = "Submit" />
-        </form>
+        <div class="container">
+            <header>
+                <ul>
+                    <li><a href="Inventory.html">Home</a></li>
+                    <li><a href="DBCreateItem.html">Add Items</a></li>
+                </ul>
+            </header>
+            <div class="item">
+                <form action = "./scripts/DBCreateItem.php" method = "GET">
+                    <ul>
+                        <li>Product Name: <input type = "text" name = "pname" /></li>
+                        <li>Unit Price: <input type = "text" name = "uprice" /></li>
+                        <li>Current Amount: <input type = "text" name = "camount" /></li>
+                        <li>Reorder Amount: <input type = "text" name = "ramount" /></li>
+                        <li><input type = "Submit" /></lit>
+                    </ul>
+                </form>
+            </div>
+        </div>
     </body>
 </html>

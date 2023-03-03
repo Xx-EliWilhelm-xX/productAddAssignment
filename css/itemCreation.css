@@ -1,0 +1,18 @@
+form {
+    width: 30%;
+    margin: auto;
+    outline-style: solid;
+    outline-color:invert ;
+    background-color: #bbb;
+}
+  
+form ul {
+    background-color:transparent;
+    margin-bottom: 0px;
+}
+  
+form ul li {
+    float: left;
+    border-right: hidden;
+    margin: 3pt;
+}

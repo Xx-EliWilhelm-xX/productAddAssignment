@@ -11,6 +11,10 @@ ul {
   background-color: #333;
 }
 
+input {
+  margin-bottom: 5pt;
+}
+
 li {
   float: left;
   border-right: 1px solid #bbb;
@@ -29,15 +33,22 @@ li a:hover {
 }
 
 .container {
-    display: grid;
-    grid-template-areas:
-      'header header'
-      'item1 item2';
-    gap: 10px;
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'item1 item2'
+    'item item';
+  gap: 10px;
 }
 
 header {
   grid-area: header;
+  font-size: 30px;
+  text-align: center;
+}
+
+.item {
+  grid-area: item;
   font-size: 30px;
   text-align: center;
 }
