@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./css/default.css">
+    </head>
+    <body>
+        <ul>
+            <li><a href="Inventory.html">Home</a></li>
+            <li><a href="DBAdd.html">Add Items</a></li>
+            <li><a href="DBView.html">View Items</a></li>
+        </ul>
+        <form action = "./scripts/DBAdd.php" method = "GET">
+            Product Name: <input type = "text" name = "pname" />
+            Unit Price: <input type = "text" name = "uprice" />
+            Current Amount: <input type = "text" name = "camount" />
+            Reorder Amount: <input type = "text" name = "ramount" />
+            <input type = "Submit" />
+        </form>
+    </body>
+</html>
