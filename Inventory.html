@@ -3,15 +3,22 @@
         <link rel="stylesheet" href="./css/default.css">
     </head>
     <body>
-        <ul>
-            <li><a href="Inventory.html">Home</a></li>
-            <li><a href="DBCreateItem.html">Add Items</a></li>
-            <li><a href="DBView.html">View Items</a></li>
-            <li><a href="./scripts/DBViewAll.php">Test View</a></li>
-        </ul>
-
-        <iframe src="./scripts/DBViewAll.php" height="800" width="600" title="Iframe Test"></iframe>
-
+        <div class="container">
+            <header>
+                <ul>
+                    <li><a href="Inventory.html">Home</a></li>
+                    <li><a href="DBCreateItem.html">Add Items</a></li>
+                </ul>
+            </header>
+            <div id="item-one">
+                <h3>All items</h3>
+                <iframe src="./scripts/DBViewAll.php" height="250%" width="95%" title="Iframe Test"></iframe>
+            </div>
+            <div id="item-two">
+                <h3>Items that need a reorder</h3>
+                <iframe src="./scripts/DBViewReorder.php" height="250%" width="95%" title="Iframe Test"></iframe>
+            </div>
+        </div>
 
     </body>
 </html>
