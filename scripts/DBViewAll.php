@@ -1,16 +1,10 @@
 <html>
 <head>
-	<title>Display Query Result</title>
+	<title>Display All Items</title>
 	<link rel="stylesheet" href="../css/default.css">
 	<link rel="stylesheet" href="../css/dbView.css">
 </head>
 <body>
-	<ul>
-		<li><a href="../Inventory.html">Home</a></li>
-		<li><a href="../DBAdd.html">Add Items</a></li>
-		<li><a href="../DBView.html">View Items</a></li>
-	</ul>
-
 	<?php
 
 		$dbhost = 'fdb1029.awardspace.net';
