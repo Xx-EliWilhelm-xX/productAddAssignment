@@ -16,3 +16,7 @@ form ul li {
     border-right: hidden;
     margin: 3pt;
 }
+
+input {
+    margin-bottom: 5pt;
+}
