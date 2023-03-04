@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="./css/default.css">
+        <link rel="stylesheet" href="./css/Inventory.css">
     </head>
     <body>
         <div class="container">
@@ -12,16 +13,24 @@
             </header>
             <div id="item-one">
                 <h3>All items</h3>
-                <iframe src="./scripts/DBViewAll.php" height="250%" width="95%" title="Iframe Test"></iframe>
-                <form>
-                    
+                <iframe src="./scripts/DBViewAll.php" height="190%" width="95%" title="View All"></iframe>
+                <form action="./scripts/DBDispatch.php" method = "GET">
+                    <ul>
+                        <li>ProductID to dispatch: <input type = "text" name = "pid" /></li>
+                        <li>Amount to dispatch: <input type = "text" name = "amount" /></li>
+                        <li><input type="Submit" /></li>
+                    </ul>
                 </form>
             </div>
             <div id="item-two">
                 <h3>Items that need a reorder</h3>
-                <iframe src="./scripts/DBViewReorder.php" height="250%" width="95%" title="Iframe Test"></iframe>
-                <form>
-
+                <iframe src="./scripts/DBViewReorder.php" height="190%" width="95%" title="View Reorders"></iframe>
+                <form action="./scripts/DBAddItem.php" method = "GET">
+                    <ul>
+                        <li>ProductID to order: <input type = "text" name = "pid" /></li>
+                        <li>Amount to reorder: <input type = "text" name = "amount" /></li>
+                        <li><input type="Submit" /></li>
+                    </ul>
                 </form>
             </div>
         </div>
