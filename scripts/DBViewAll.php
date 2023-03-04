@@ -6,18 +6,16 @@
 </head>
 <body>
 	<?php
-
 		$dbhost = 'fdb1029.awardspace.net';
-		$dbuser = '4240987_epwilhe';
-		$dbpass = 'Kipper9000';
-		$dbname = 'Inventory';
-		$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
+                $dbuser = '4240987_epwilhe';
+                $dbpass = 'Kipper9000';
+                $dbname = '4240987_epwilhe';
+                
+                $conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
-		if(! $conn ) {
-			die('Could not connect: ' . mysqli_error());
-		}
-
-		echo 'Connected successfully'."<br>";
+		if($conn === false){
+                        die("ERROR: Could not connect. " . mysqli_connect_error());
+                }
 
 		// sql to create table
 
@@ -31,7 +29,7 @@
 
 			$display_string = "<table>";
 			$display_string .= "<tr>";
-			$display_string .= "<th>Product Id</th>";
+			$display_string .= "<th>Product ID</th>";
 			$display_string .= "<th>Product Name</th>";
 			$display_string .= "<th>Unit Price</th>";
 			$display_string .= "<th>Current Amount</th>";
@@ -41,7 +39,7 @@
 			// output data of each row
 			while($row = mysqli_fetch_assoc($result)) {
 			$display_string .= "<tr>";
-			$display_string .= "<td>".$row["ProductId"]."</td>";
+			$display_string .= "<td>".$row["ProductID"]."</td>";
 			$display_string .= "<td>".$row["ProductName"]."</td>";
 			$display_string .= "<td>".$row["UnitPrice"]."</td>";
 			$display_string .= "<td>".$row["CurrentAmount"]."</td>";

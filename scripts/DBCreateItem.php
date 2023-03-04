@@ -1,4 +1,6 @@
 <?php
+        header("refresh:3; url=../DBCreateItem.html" );
+            
 	if(isset($_GET['pid'])) {
 		$pid = ($_GET['pid']);
 	}
@@ -12,11 +14,11 @@
 	}
 
 	if(isset($_GET ['camount'])) {
-		$camount = ($_GET[camount]);
+		$camount = ($_GET['camount']);
 	}
 
 	   if(isset($_GET ['ramount'])) {
-		$ramount = ($_GET[ramount]);
+		$ramount = ($_GET['ramount']);
 	}
 
 
@@ -24,7 +26,7 @@
 	$dbhost = 'fdb1029.awardspace.net';
 	$dbuser = '4240987_epwilhe';
 	$dbpass = 'Kipper9000';
-	$dbname = 'Inventory';
+	$dbname = '4240987_epwilhe';
 	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
 	if(! $conn ) {
@@ -35,7 +37,7 @@
 
 	// sql to create table
 
-	$sql = "INSERT INTO My_ProductInfo (ProductName, UnitPrice, CurrentAmount, ReorderAmount)
+	$sql = "INSERT INTO Inventory (ProductName, UnitPrice, CurrentAmount, ReorderAmount)
 	VALUES ('$pname', $uprice, $camount, $ramount)";
 
 	if (mysqli_query($conn, $sql)) {
